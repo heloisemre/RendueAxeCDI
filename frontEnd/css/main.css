@@ -1,0 +1,393 @@
+/* Importing all css files */
+@import 'register&login.css';
+@import 'home.css';
+@import 'profile.css';
+@import 'carte.css';
+
+/* define color variables */
+:root{
+    --text-ligth: #f8f9fa;
+    --text-dark: #343a40;
+    --theme-base: #343a40;
+    --theme-primary: #007bff;
+    --theme-gryffindor: #740001;
+    --theme-slytherin: #1a472a;
+    --theme-ravenclaw: #222f5b;
+    --theme-hufflepuff: #ecb939;
+    --theme-liked: #ff0080;
+    --theme-disliked: #707070;
+}
+
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* style body */
+body {
+    background-image: url(https://cdn-uploads.gameblog.fr/img/news/429734_64a3d015dc346.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+.active {
+    color: var(--theme-primary) !important;
+}
+
+
+/* style header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+header h1 {
+    color: var(--text-ligth);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--text-ligth);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: var(--theme-primary);
+}
+
+header svg {
+    display: none;
+}
+
+/* responsive header */
+@media screen and (max-width: 767px) {
+    header {
+        position: fixed;
+        right: calc(100% - 31px);
+        z-index: 50;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        transition: ease-in-out 0.5s;
+        background-color: var(--text-ligth);
+        color: var(--text-dark) ;
+    }
+
+    header h1 {
+        font-size: 40px;
+        color: var(--text-dark) ;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li a {
+        font-size: 30px;
+        color: var(--text-dark) ;
+    }
+
+    header svg {
+        display: block;
+        position: fixed;
+        left: 0;
+        transition: ease-in-out 0.5s;
+    }
+
+    .burgerNav {
+        right: 0%;
+    } 
+
+    .flipNav {
+        left: 90%;
+        transform: rotate(180deg);
+    }
+}
+
+/* style filter */ 
+#filtres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--text-ligth);
+    color: var(--text-primary);
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+#filtres h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#filtres ul {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+#filtres ul li {
+    list-style: none;
+}
+
+#filtres ul li:hover {
+    color: var(--theme-primary);
+    cursor: pointer;
+}
+
+#filtres svg {
+    display: none;
+}
+
+/* responsive filter */
+
+@media screen and (max-width: 767px) {
+    #filtres {
+        position: fixed;
+        bottom: calc(100% - 31px);
+        z-index: 40;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        background-color: var(--text-ligth);
+        color: var(--text-dark);
+        transition: ease-in-out 0.5s;
+    }
+
+    #filtres h2 {
+        font-size: 40px;
+    }
+
+    #filtres ul {
+        flex-direction: column;
+    }
+
+    #filtres ul li {
+        font-size: 30px;
+    }
+
+    #filtres svg {
+        display: block;
+        position: fixed;
+        top: 0;
+        rotate: 90deg;
+        transition: ease-in-out 0.5s;
+    }
+
+    .burgerFiltres {
+        bottom: 0% !important;
+    }
+
+    .flipFiltres {
+        top: 90%;
+        transform: rotate(180deg);
+    }
+}
+
+/* style card */
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: solid 5px var(--theme-base);
+    border-radius: 10px;
+    background-color: var(--text-ligth);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    height: 500px;
+}
+
+.card img {
+    height: 200px;
+    border-radius: 10px;
+    filter: grayscale(100%);
+}
+
+.obtained img{
+    filter: grayscale(0%);
+}
+
+.card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 16px;
+    text-align: center;
+}
+
+.card div {
+    display: flex;
+    gap: 20px;
+}
+
+.card button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--theme-primary);
+    color: var(--text-ligth);
+    text-transform: uppercase;
+}
+
+.card button:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+/* pop up */
+
+#getCards {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#getCards:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#popup-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 20px;
+    padding: 20px;
+    border: solid 5px var(--theme-base);
+    border-radius: 10px;
+    background-color: var(--text-ligth);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 50vw;
+    height: 500px;
+}
+
+#popup-content h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#popup-content button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid var(--theme-primary);
+    border-radius: 5px;
+    background-color: var(--theme-primary);
+    color: var(--text-ligth);
+    text-transform: uppercase;
+}
+
+#close-popup:hover {
+    cursor: pointer;
+    color: var(--theme-primary);
+    background-color: var(--text-ligth);
+}
+
+#popup-content button:hover {
+    cursor: pointer;
+    color: var(--theme-primary);
+    background-color: var(--text-ligth);
+}
+
+
+#newCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+
+.Gryffindor {
+    border: var(--theme-gryffindor) solid 5px;
+}
+
+.Slytherin {
+    border: var(--theme-slytherin) solid 5px;
+}
+
+.Ravenclaw {
+    border: var(--theme-ravenclaw) solid 5px;
+}
+
+.Hufflepuff {
+    border: var(--theme-hufflepuff) solid 5px;
+}
+
+.Favorite {
+    border: var(--theme-liked) solid 5px;
+}
+

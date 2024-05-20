@@ -39,6 +39,7 @@ bower_components
 build/Release
 
 # Dependency directories
+/backEnd/node_modules
 node_modules/
 jspm_packages/
 
@@ -78,6 +79,7 @@ web_modules/
 .env.test.local
 .env.production.local
 .env.local
+/backEnd/.env
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache

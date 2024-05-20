@@ -1,0 +1,62 @@
+/* style form */
+#register,#login{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: var(--theme-base);*/
+}
+
+#register form,#login form{
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--text-ligth);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#register form fieldset,#login form fieldset{
+    border: none;
+    margin-bottom: 20px;
+}
+
+#register form fieldset legend,#login form fieldset legend{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--theme-base);
+    margin-bottom: 10px;
+}
+
+#register form fieldset input,#login form fieldset input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--theme-base);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#register form fieldset button,#login form fieldset button{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--theme-base);
+    border-radius: 5px;
+    background-color: var(--theme-base);
+    color: var(--text-ligth);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#register form fieldset button:hover,#login form fieldset button:hover{
+    background-color: var(--text-ligth);
+    color: var(--theme-base);
+    border: 1px solid var(--theme-base);
+}
+
+#register form fieldset a,#login form fieldset a{
+    display: block;
+    text-align: center;
+    color: var(--theme-base);
+    margin-top: 10px;
+}

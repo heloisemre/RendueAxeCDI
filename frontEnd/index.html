@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/9/9b/HP_-_Harry_Potter_wordmark.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <h1>Hogwart</h1>
+        <nav>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li onclick="logout()"><a href="#">LogOut</a></li>
+            </ul>
+        </nav>
+        <svg onclick="toggleBurger()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20"><path fill="#343a40" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z"/></svg>
+    
+    </header>
+    <aside id="filtres">
+        <h2>Filters :</h2>
+        <ul>
+            <li class="filre active">All</li>
+            <li class="filre">Gryffindor</li>
+            <li class="filre">Hufflepuff</li>
+            <li class="filre">Ravenclaw</li>
+            <li class="filre">Slytherin</li>
+            <li class="filre">Favorite</li>
+        </ul>
+        <svg onclick="toggleFilter()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20"><path fill="#343a40" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z"/></svg>
+    </aside>
+    <main>
+        <section id="cards">
+                
+        </section>
+    </main>
+    <div onclick="openPopup()" id="getCards">
+        <svg  xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24"><path fill="#d400ff" d="m21.47 4.35l-1.34-.56v9.03l2.43-5.86c.41-1.02-.06-2.19-1.09-2.61m-19.5 3.7L6.93 20a2.01 2.01 0 0 0 1.81 1.26c.26 0 .53-.05.79-.16l7.37-3.05c.75-.31 1.21-1.05 1.23-1.79c.01-.26-.04-.55-.13-.81L13 3.5a1.95 1.95 0 0 0-1.81-1.25c-.26 0-.52.06-.77.15L3.06 5.45a1.994 1.994 0 0 0-1.09 2.6m16.15-3.8a2 2 0 0 0-2-2h-1.45l3.45 8.34"/></svg>
+    </div>
+    <div id="popup">
+        <div id="popup-content">
+            <div onclick="closePopup()" id="close-popup">X</div>
+            <h2>Get 5 news cards</h2>
+            <div id="newCard">
+                
+            </div>
+            <button onclick="openBooster()">Get</button>
+        </div>
+    </div>
+</body>
+</html>

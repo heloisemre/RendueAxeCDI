@@ -1,0 +1,43 @@
+h2, h3 {
+    background-color: var(--text-ligth);
+    padding: 10px;
+}
+
+#profile #cards .card {
+    display: none ;
+}
+
+#profile #cards .obtained {
+    display: flex ;
+}
+
+#profile .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+#profile .profile h2, h3 {
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 767px) {
+    #profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-top: 40px;
+    }
+    
+    #profile .profile {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+}
